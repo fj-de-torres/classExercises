@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fizzBuzz</title>
+    <script>
+        /*imprimir los números del 1 al 20.
+        
+        Para números divisibles por 3, imprimir “Fizz”.
+        Para números divisibles por 5, imprimir “Buzz”.
+        Para números divisibles por 3 y 5, imprimir “FizzBuzz”.
+        En cualquier otro caso, imprimir el número.*/
+        console.log("%cImprimir los números del 1 al 20.", "color: yellow;");
+        console.log("%cPara números divisibles por 3, imprimir “Fizz”.", "color: yellow;");
+        console.log("%cPara números divisibles por 5, imprimir “Buzz”.", "color: yellow;");
+        console.log("%cPara números divisibles por 3 y 5, imprimir “FizzBuzz”.", "color: yellow;");
+        console.log("%cEn cualquier otro caso, imprimir el número.”.", "color: yellow;");
+        for (let i = 1; i <= 20; i++) {
+            if (i % 5 === 0 && i % 3 === 0) {
+                console.log('FizzBuzz');
+                continue;
+            }
+
+            if (i % 3 === 0) {
+                console.log('Fizz');
+                continue;
+            }
+
+            if (i % 5 === 0) {
+                console.log('Buzz');
+                continue;
+            }
+
+            console.log(i);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

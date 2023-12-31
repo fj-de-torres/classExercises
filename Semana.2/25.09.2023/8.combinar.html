@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinar</title>
+    <script>
+        /*8. Combina las sentencias if en un único bloque de tipo if/else.
+
+function testElse(val) {
+    let result = "";
+    if (val > 5) {
+        result = "Mayor que 5";
+    }
+
+    if (val <= 5) {
+        result = "5 más pequeño";
+    }
+    return result;
+}*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Funciones en Javascript');
+        enunciado(`8. Combina las sentencias if en un único bloque de tipo if/else.
+
+function testElse(val) {
+    let result = "";
+    if (val > 5) {
+        result = "Mayor que 5";
+    }
+
+    if (val <= 5) {
+        result = "5 más pequeño";
+    }
+    return result;
+}`);
+        function testElse(val) {
+            let result = "";
+            if (val > 5) {
+                result = "Mayor que 5";
+            }
+            else {
+                result = "Menor o igual que 5";
+            }
+            return result;
+        }
+        //O también:
+        /*
+        function testElse (val) {
+        return val > 5 ? "Mayor que 5" : "Menor o igual que 5";
+        }
+        */
+        for (i = 0; i <= 10; i += 2) {
+            console.log('%cPara i = ' + i + '; ' + testElse(i), "color:pink;font-size:14px");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

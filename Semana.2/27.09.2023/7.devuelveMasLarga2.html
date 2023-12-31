@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devuelve más larga2</title>
+    <script>
+        /*7. Hacer una función devuelveMasLarga2 que reciba como parámetro de entrada tres cadenas de texto y devuelva la mayor. En caso de que al menos dos cadenas tengan igual longitud, devolveremos el texto Hay al menos dos cadenas iguales.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(var1, inicio, final) {
+            //formatedText = "%c" + text + " ";
+            console.log("%cLas letras que van desde la posición " + inicio + " hasta la posición " + final + " de la cadena " + var1 + " es " + devuelveCadena(var1, inicio, final), "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Métodos para trabajo con cadenas');
+        enunciado(`7. Hacer una función devuelveMasLarga2 que reciba como parámetro de entrada tres cadenas de texto y devuelva la mayor. En caso de que al menos dos cadenas tengan igual longitud, devolveremos el texto Hay al menos dos cadenas iguales.`);
+
+        const devuelveMasLarga = (cadena1, cadena2) => {
+            const len1 = cadena1.length
+            const len2 = cadena2.length
+            return len1 > len2 ? cadena1 : cadena2;
+        };
+        const devuelveMasLarga2 = (cadena1, cadena2, cadena3) => {
+            if (cadena1.length == cadena2.length || cadena1.length == cadena3.length || cadena2.length == cadena3.length) {
+                console.log('Hay al menos dos cadenas iguales.')
+            } else {
+                devuelveMasLarga(devuelveMasLarga(cadena1, cadena2), cadena3)
+            }
+            resultado('La cadena "', devuelveMasLarga2('Nenúfar', 'Adiós', 'Hola'), '" es más la larga');
+        }
+        /*Solución del profesor:
+            const devuelveMasLarga2 = (txt1, txt2, txt3) => {
+        const txt1Length = txt1.length;
+        const txt2Length = txt2.length;
+        const txt3Length = txt3.length;
+        if (txt1Length > txt2Length && txt1Length > txt3Length) {
+            return txt1;
+        } else if (txt2Length > txt1Length && txt2Length > txt3Length) {
+            return txt2;
+        } else if (txt3Length > txt1Length && txt3Length > txt2Length) {
+            return txt3;
+        } else {
+            return "Hay al menos dos cadenas iguales";
+        }
+    }
+
+
+    console.log(devuelveMasLarga2('aa1', 'bbba', 'cccc'))
+    */
+    </script>
+</head>
+
+<body>

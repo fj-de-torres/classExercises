@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circunferencia</title>
+    <script>
+        /*Crear estas dos funciones:
+        calculaPerimetro(radio); 
+        Perímetro de la circunferencia = 2*Math.PI*radio
+
+        calculaArea(radio); 
+        Area de la circunferencia = Math.PI*radio2*/
+
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text, variable) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, variable, text2) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + variable + text2, "color:aqua; font-size:15px; font-style:italic;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Funciones en Javascript');
+        enunciado(`Crear estas dos funciones:
+        calculaPerimetro(radio); 
+        Perímetro de la circunferencia = 2*Math.PI*radio
+
+        calculaArea(radio); 
+        Area de la circunferencia = Math.PI*radio2`);
+        function calculaPerimetro(radio) {
+            const perimetro = 2 * Math.PI * radio;
+            resultado('El radio dado es:', radio, 'cm;');
+            resultado('El perímetro de la circunferencia es:', perimetro, 'cm;');
+        }
+        function caculaArea(radio) {
+            area = Math.PI * radio ** 2;
+            //area = Math.PI * radio * radio;
+            resultado('El radio dado es:', radio, 'cm;');
+            resultado('El área de la circunferencia es:', area, 'cm²;');
+        }
+        radio = 2;
+        calculaPerimetro(radio);
+        enunciado('Calcular el área de una circunferencia:');
+        caculaArea(radio);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

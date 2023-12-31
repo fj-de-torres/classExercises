@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generarNombre</title>
+    <script>
+        /*8. Hacer una función generarNombre que reciba como parámetros de entrada tres cadenas de texto. Si la longitud de alguna cadena cadena es menor que cinco, la función debe devolver el texto ‘error’. Si ninguna cadena tiene menos de 5 letras, devolver una nueva palabra utilizando las tres primeras letras de cada palabra.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, var1) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + var1, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Métodos para trabajo con cadenas');
+        enunciado(`8. Hacer una función generarNombre que reciba como parámetros de entrada tres cadenas de texto. Si la longitud de alguna cadena cadena es menor que cinco, la función debe devolver el texto ‘error’. Si ninguna cadena tiene menos de 5 letras, devolver una nueva palabra utilizando las tres primeras letras de cada palabra.`);
+        const generarNombre = (nom1, nom2, nom3) => {
+            const nom1Len = nom1.length;
+            const nom2Len = nom2.length;
+            const nom3Len = nom3.length;
+            if (nom1Len < 5 || nom2Len < 5 || nom3Len < 5) {
+                return 'Error'
+            }
+            else {
+                const i = 3;
+                return nom1.substring(0, i) + nom2.substring(0, i) + nom3.substring(0, i);
+            }
+        }
+        resultado('', generarNombre('Francisco', 'Ricardo', 'Roberto'));
+        //console.log(generarNombre('Francisco', 'Ricardo', 'Roberto'))
+    </script>
+</head>
+
+<body>

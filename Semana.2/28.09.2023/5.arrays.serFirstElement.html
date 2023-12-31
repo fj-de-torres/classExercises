@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set first element</title>
+    <script>
+        /*5. Escribe una función llamada setFirstElement que reciba como parámetro de entrada un array y un valor cualquiera. El valor recibido debería reemplazar lo que haya en la primera posición del array. El array debería ser devuelto.
+        Ejemplo:
+        setFirstElement([1, 2], 3);
+        debería devolver [3, 2]
+            */
+        function rainbowLog(message) {
+            const Red = '#FF0000';
+            const Orange = '#FFA500';
+            const Yellow = '#FFFF00';
+            const Green = '#00FF00';
+            const Blue = '#5959fe';
+            const Indigo = '#8a5bac';
+            const Violet = '#e0a4f9';
+            const rainbowColors = [Red, Orange, Yellow, Green, Blue, Indigo, Violet];
+            let output = '';
+            let styles = [];
+            const bgColors = ['white', 'grey', 'black'];
+            const bgColor = bgColors[2];
+            fontSize = '2.5em';
+            for (let i = 0; i < message.length; i++) {
+                message[i] !== " " ? output += `%c${message[i]}` : output += " ";
+                styles.push(`color: ${rainbowColors[i % (rainbowColors.length + 1)]};background-color:${bgColor};font-size:${fontSize};`);
+            }
+            console.log(output, ...styles);
+        }
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(var1) {
+            //formatedText = "%c" + text + " ";
+            console.log("%c[" + var1 + "]", `color:${colorRespuesta}; font-size:${tamañoFuente};`);
+            //console.log(formatedText);
+        }
+        colorRespuesta = 'pink';
+        tamañoFuente = '2em';
+        titulo('Tema: Arrays en Javascript');
+        enunciado(`5. Escribe una función llamada setFirstElement que reciba como parámetro de entrada un array y un valor cualquiera. El valor recibido debería reemplazar lo que haya en la primera posición del array. El array debería ser devuelto.
+        Ejemplo:
+        setFirstElement([1, 2], 3);
+        debería devolver [3, 2]`);
+        const array = [1, 2];
+        const setFirstElement = (array, n) => {
+            array[0] = n;
+            return array;
+        }
+        rainbowLog('[' + setFirstElement(array, 3) + ']');
+        console.log(14 % 7);
+        rainbowLog('1234567');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

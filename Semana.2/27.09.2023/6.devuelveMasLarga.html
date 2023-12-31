@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devuelve la más larga</title>
+    <script>
+        /*6. Hacer una función devuelveMasLarga que reciba como parámetro de entrada dos cadenas de texto y devuelva la mayor. En caso de que ambas cadenas sean iguales, devolveremos la correspondiente al primer parámetro de la función.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text1, var1, text2) {
+            formatedText = "%c" + text1;
+            console.log(formatedText + var1 + text2, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Métodos para trabajo con cadenas');
+        enunciado(`6. Hacer una función devuelveMasLarga que reciba como parámetro de entrada dos cadenas de texto y devuelva la mayor. En caso de que ambas cadenas sean iguales, devolveremos la correspondiente al primer parámetro de la función.`);
+
+        const devuelveMasLarga = (cadena1, cadena2) => {
+            const len1 = cadena1.length
+            const len2 = cadena2.length
+            return len1 >= len2 ? cadena1 : cadena2;
+        };
+
+        resultado('La cadena "', devuelveMasLarga('Nenúfar', 'Adiós'), '" es más la larga');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

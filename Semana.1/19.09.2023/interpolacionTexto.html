@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpolación de Texto</title>
+    <script>
+
+        //Interpolación de textos:
+        const text1 = 'Este es el principio';
+        const text2 = 'Este es el final';
+        console.log(text1 + ' ' + text2);
+        console.log(`${text1} ${text2}`);
+
+        const text3 = text1 + ' ' + text2;
+
+        const euros = 7;
+        const dolares = 2 * euros;
+        console.log(dolares);
+
+        const precio = 100;
+        const precioConIva = 100 * 1.21 // Modificar sólo esta línea
+        console.log(precioConIva); // Debería mostrar 121
+
+        const ancho = 4;
+        const alto = 7;
+        const area = ancho * alto;
+        console.log('El área es: ' + area);
+
+        /*https://pablomonteserin.com/curso/javascript/operadores-aritmeticos/#conversor_grados*/
+        const centigrados = 20;
+        const fahrenheit = (9 * centigrados) / 5 + 32;// Modificar sólo esta línea
+        console.log(`${fahrenheit} ºF`); // Debería mostrar 68
+
+        /*Vamos a mandar al usuario la caja de sus sueños. Para ello, partiremos de los siguientes valores:*/
+        const nombre = 'Juan';
+        const material = 'madera';
+        const dimensiones = 'diminutas';
+        const comentario = 'Que sea bonita, pero de una belleza estraña, indómita';
+        const mensaje = nombre + ' ha pedido una caja de ' + material + ' con unas dimensiones ' + dimensiones + '.' + comentario;
+        console.log(mensaje);
+        //Interpolación de texto:
+        const txt2 = `${nombre} ha pedido una caja de ${material} con unas dimensiones ${dimensiones}. ${comentario}`;
+
+        //Haz un código equivalente al siguiente utilizando el operador unario de suma (++).
+        let myVar = 87;
+        myVar += 1; // Modificar esta línea
+        console.log('My var es: ' + myVar);
+
+        //  Haz un código equivalente al siguiente utilizando el operador unario de resta (–);
+        myVar = 11;
+        myVar -= 1; // Modificar esta línea
+        console.log(`My var es: ${myVar}`);
+
+        // Modificar SÓLO EL OPERADOR BOOLEANO para lograr que se imprima el mensaje:
+
+        const dato1 = 10;
+        const dato2 = 10;
+        if (dato1 === dato2) {
+            console.log('exito');
+        }
+        // Corrige los errores que hay en este código:
+        if (10 == 10) {
+            console.log('You got a true!')
+        } else {
+            console.log('You got a false!')
+        }
+
+        //Dada una constante que contiene la nota de un examen que va de 0 a 10…
+        let nota = 10;
+        if (nota <= 10 && nota >= 0) {
+            if (nota < 5) {
+                console.log('Suspenso');
+            }
+            else if (nota === 5) {
+                console.log('Aprobado por los pelos');
+            }
+            else {
+                console.log('Aprobado');
+            }
+        }
+        else {
+            console.log('Nota no váldia. Inténtalo de nuevo');
+        }
+
+        // Declara una constante ‘i’ de tipo entero y asígnale un valor. Mostrar un mensaje indicando si el valor de ‘i’ es positivo o negativo, si es par o impar, si es múltiplo de 5, si es múltiplo de 10 y si es mayor o menor que 100. Consideraremos el 0 como positivo.
+        const i = 7;
+        if (i < 0) {
+            console.log('El nº es negativo');
+        }
+        else {
+            console.log('El nº es positivo');
+        }
+        if ((i % 2) === 0) {
+            console.log('Además, el nº es par');
+            par = true;
+        }
+        else {
+            console.log('Además, el nº es impar');
+            par = false;
+        }
+        if ((i % 5) === 0) {
+            console.log('Y divisible entre 5');
+            cinco = true;
+        }
+        else {
+            console.log('Y no es divisible entre 5');
+            cinco = false;
+        }
+        if (par && cinco) {
+            console.log('También es divisible entre 10');
+        }
+        else {
+            console.log('No es divisible entre 10')
+        }
+        if (i < 100) {
+            console.log('...Y es menor que 100');
+        }
+        else if (i > 100) {
+            console.log('...Y es mayor que 100')
+        }
+        else {
+            console.log('Curiosamente, tu nº es igual 100');
+        }
+        console.log('----------------------------------------');
+        console.log("%cOperadores booleanos y estructuras condicionales:", "color: yellow; font-size: 1.5em; font - weight: 800; ");
+        console.log("%cHacer una calculadora que determine la operación a realizar por medio de una estructura de control if.", "color: aqua; font-size: 15px; ");
+        console.log(' ');
+        /*Hacer una calculadora que determine la operación a realizar por medio de una estructura de control if.
+
+        La calculadora utilizará 3 constantes para hacer los cálculos. */
+        const n1 = 3;
+        const n2 = 7;
+        const op = '/';
+        let resultado;
+        if (op == '+' || op == '-' || op == '/' || op == '*') {
+            if (op === '+') {
+                resultado = n1 + n2;
+            }
+            else if (op === '-') {
+                resultado = n1 - n2;
+            }
+            else if (op == '/') {
+                resultado = n1 / n2;
+            } else if (op == '*') {
+                resultado = n1 * n2;
+            }
+            console.log("%cEl resultado es: " + resultado, "font-size:20px; ");
+        }
+        else {
+            console.log("%c¡Operación no reconocida!", "color: red; font-size:1.5em ");
+        }
+        //console.log(' ');
+    </script>
+    <style>
+        body {
+            color: aqua
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

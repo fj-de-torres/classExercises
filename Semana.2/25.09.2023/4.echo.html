@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo</title>
+    <script>
+        /*4. Escribe una función echo que devuelva el valor que recibe como parámetro.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+
+        function echo(txt) {
+            /* esto es lo que hice yo, pero no hace falta:
+            const a = param;
+            return a; */
+            return txt
+        }
+        titulo('Funciones en Javascript');
+        enunciado('Escribe una función echo que devuelva el valor que recibe como parámetro');
+        const parametro = 1237;
+        const prueba = echo(parametro);
+        resultado('el parámetro que le paso es el nº:', prueba);
+        resultado('El resultado es:', prueba);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

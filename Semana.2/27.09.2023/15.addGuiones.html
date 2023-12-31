@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crearPalabra</title>
+    <script>
+        /*15. Hacer una función addGuiones que reciba como parámetro de entrada una cadena texto y devuelva una nueva cadena que tendrá un guion medio detrás de cada letra. Utilizar para ello un bucle for.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText, "color:aqua; font-size:2em;");
+            //console.log(formatedText);
+        }
+
+        titulo('Tema: Métodos para trabajo con cadenas');
+        enunciado(`15. Hacer una función addGuiones que reciba como parámetro de entrada una cadena texto y devuelva una nueva cadena que tendrá un guion medio detrás de cada letra. Utilizar para ello un bucle for.`);
+
+        function addGuiones(cadena) {
+            const len = cadena.length;
+            let newCadena = '';
+            for (i = 0; i < len; i++) {
+                newCadena += cadena[i] + '-';
+            }
+
+            return newCadena;
+        }
+        resultado(addGuiones('15. Hacer una función addGuiones'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

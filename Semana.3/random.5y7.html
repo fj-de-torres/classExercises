@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random I</title>
+    <script>
+        /*1. Escribe un objeto llamado miPerro que tenga las siguientes propiedades: piernas, colas, amigos. Dale valor a estas propiedades.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(var1) {
+            //formatedText = "%c" + text + " ";
+            console.log("%c" + var1, `color:${colorRespuesta}; font-size:${tamañoFuente};`);
+            //console.log(formatedText);
+        }
+        function rainbowLog(message) {
+            const Red = '#FF0000';
+            const Orange = '#FFA500';
+            const Yellow = '#FFFF00';
+            const Green = '#00FF00';
+            const Blue = '#5959fe';
+            const Indigo = '#8a5bac';
+            const Violet = '#e0a4f9';
+            const rainbowColors = [Red, Orange, Yellow, Green, Blue, Indigo, Violet];
+            let output = '';
+            let styles = [];
+            const bgColors = ['white', 'grey', 'black'];
+            const bgColor = bgColors[2];
+            fontSize = '2.5em';
+            for (let i = 0; i < message.length; i++) {
+                message[i] !== " " ? output += `%c${message[i]}` : output += " ";
+                styles.push(`color: ${rainbowColors[i % (rainbowColors.length)]};background-color:${bgColor};font-size:${fontSize};`);
+            }
+            console.log(output, ...styles);
+        }
+        colorRespuesta = 'pink';
+        tamañoFuente = '2em';
+        titulo('Tema:Números aleatorios (random) en Javascript');
+        enunciado(`1.Obtener un número aleatorio entre 5 y 7.`);
+        const MIN = 5;
+        const MAX = 7;
+        let myRandom = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+        rainbowLog(`${myRandom}`);
+        resultado(`${myRandom}`);
+        //console.log(myRandom);
+    </script>
+    <style>
+        body {
+            background-color: rgb(205, 205, 205);
+        }
+
+        p {
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>If you can't see anything here, you need to open the browser console
+        (F12 key).</p>
+</body>
+
+</html>

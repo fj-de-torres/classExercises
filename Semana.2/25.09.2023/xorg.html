@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xorg</title>
+    <script>
+        /*15. Escribe una función xor que tome dos valores booleanos. Si ambos valores son diferentes, debería devolver true. Si ambos valores son iguales, debería devolver false.
+
+Por ejemplo, las llamadas:
+
+xor(true, false);
+xor(false, true);
+deberían devolver true.
+
+Ver código fuente
+Ver explicación
+Las llamadas
+
+xor(true, true);
+xor(false, false);
+deberían devolver false.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var2, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var2 + ": " + Var, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Funciones en Javascript');
+        enunciado('15. Escribe una función xor que tome dos valores booleanos. Si ambos valores son diferentes, debería devolver true. Si ambos valores son iguales, debería devolver false.');
+
+        function xor(a, b) {
+
+            return (a !== b)
+
+        }
+        var valor1 = xor(true, false);
+        var valor2 = xor(false, true);
+        var valor3 = xor(true, true);
+        var valor4 = xor(false, false);
+        for (i = 1; i < 5; i++) {
+            resultado('', i, window['valor' + i]);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

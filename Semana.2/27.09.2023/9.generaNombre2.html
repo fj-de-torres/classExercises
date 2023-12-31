@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*9. Hacer una función generarNombre2 que reciba como parámetros de entrada tres cadenas de texto. Si la longitud de alguna cadena cadena es menor que cinco, la función debe devolver el texto ‘error’. Si ninguna cadena tiene menos de 5 letras, devolver una nueva palabra utilizando la última letra de cada palabra.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, var1) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + var1, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+
+        titulo('Tema: Métodos para trabajo con cadenas');
+        enunciado('9. Hacer una función generarNombre2 que reciba como parámetros de entrada tres cadenas de texto. Si la longitud de alguna cadena cadena es menor que cinco, la función debe devolver el texto ‘error’. Si ninguna cadena tiene menos de 5 letras, devolver una nueva palabra utilizando la última letra de cada palabra.');
+
+        const generarNombre2 = (nom1, nom2, nom3) => {
+            const nom1Len = nom1.length;
+            const nom2Len = nom2.length;
+            const nom3Len = nom3.length;
+            if (nom1Len < 5 || nom2Len < 5 || nom3Len < 5) {
+                return 'Error'
+            }
+            else {
+                const i = 1;
+                return nom1.slice(-i) + nom2.slice(-i) + nom3.slice(-i);
+            }
+        }
+        resultado('', generarNombre2('Fran', 'Martín', 'Roberta'));
+    </script>
+</head>
+
+<body>

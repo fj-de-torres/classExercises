@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devuelve enésima letra</title>
+    <script>
+        /*4. Escribe una función llamada devuelveEnesimaLetra que reciba como parámetro de entrada una cadena de texto y un número y devuelva la letra que ocupe la posición indicada por el número.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(var1, n) {
+            //formatedText = "%c" + text + " ";
+            console.log("%cLa letra nº " + n + " de " + var1 + " es " + devuelveEnesimaLetra(var1, n), "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Métodos para trabajo con cadenas');
+        enunciado('2. Escribe una función llamada devuelvePrimeraLetra que reciba como parámetro de entrada una cadena de texto y devuelva la primera letra.');
+
+        const devuelveEnesimaLetra = (cadena, n) => cadena[n - 1];
+        const nombre = 'Alberto';
+        resultado('Alberto', 3);
+        resultado('Fulana', 2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

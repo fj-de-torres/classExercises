@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devuelve de array</title>
+    <script>
+        /*
+        2. Crea una función toArray que reciba dos valores y devuelva un array con estos dos valores.
+
+        Por ejemplo, la llamada:
+
+        toArray(5,9);
+
+        debería devolver el array [5, 9]
+        */
+        function rainbowLog(message) {
+            const Red = '#FF0000';
+            const Orange = '#FFA500';
+            const Yellow = '#FFFF00';
+            const Green = '#00FF00';
+            const Blue = '#5959fe';
+            const Indigo = '#8a5bac';
+            const Violet = '#e0a4f9';
+            const rainbowColors = [Red, Orange, Yellow, Green, Blue, Indigo, Violet];
+            let output = '';
+            let styles = [];
+            const bgColors = ['white', 'grey', 'black'];
+            const bgColor = bgColors[2];
+            fontSize = '2.5em';
+            for (let i = 0; i < message.length; i++) {
+                message[i] !== " " ? output += `%c${message[i]}` : output += " ";
+                styles.push(`color: ${rainbowColors[i % (rainbowColors.length + 1)]};background-color:${bgColor};font-size:${fontSize};`);
+            }
+            console.log(output, ...styles);
+        }
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(var1) {
+            //formatedText = "%c" + text + " ";
+            console.log("%c[" + var1 + "]", `color:${colorRespuesta}; font-size:${tamañoFuente};`);
+            //console.log(formatedText);
+        }
+        colorRespuesta = 'aqua';
+        tamañoFuente = '15px';
+        titulo('Tema: Arrays en Javascript');
+        enunciado(`2. Crea una función toArray que reciba dos valores y devuelva un array con estos dos valores.
+
+        Por ejemplo, la llamada:
+
+        toArray(5,9);
+
+        debería devolver el array [5, 9]`);
+        const toArray = (n1, n2) => {
+            let miArray = [n1, n2];
+            resultado(miArray);
+            //rainbowLog(miArray);
+        }
+        toArray(5, 9);
+        /*Del profesor:
+        const toArray = (n1, n2) => [n1,n2];*/
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

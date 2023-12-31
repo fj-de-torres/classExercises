@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo Flecha</title>
+    <script>
+        /*Crear y llamar a una función flecha que recibe un número y muestre su cubo con un console.log.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Funciones Flecha');
+        enunciado('Crear y llamar a una función flecha que recibe un número y muestre su cubo con un console.log');
+
+        const cubo = lado => {
+            const volumen = lado ** 3;
+            resultado('Para un lado =', 3);
+            resultado('El volumen es:', volumen);
+        }
+        cubo(3);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

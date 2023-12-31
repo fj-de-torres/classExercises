@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombres de persona</title>
+    <script>
+        /*1.Crea un array con cinco nombres de persona y recórrelo con un bucle for mostrando el texto «Conozco a alguien llamado «.
+Arrays en Javascript*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, var1) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + var1, `color:${colorRespuesta}; font-size:${tamañoFuente};`);
+            //console.log(formatedText);
+        }
+        colorRespuesta = 'aqua';
+        tamañoFuente = '15px';
+        titulo('Tema: Arrays en Javascript');
+        enunciado(`1.Crea un array con cinco nombres de persona y recórrelo con un bucle for mostrando el texto «Conozco a alguien llamado ""`);
+        const personas = ['Pedro', 'Nieves', 'Héctor', 'Juani', 'Fran'];
+        //Esta opción también funciona pero prefiero practicar la otra:
+        // for (i in personas) {
+        //     resultado('Conozco a alguien llamado:', personas[i]);
+        //     //console.log('Conozco a alguien llamado:', personas[i]);
+        // }
+        for (let element of personas) {
+            resultado('Conozco a alguien llamado:', element);
+        }
+    </script>
+    <style>
+        body {
+            color: rgb(237, 62, 62)
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

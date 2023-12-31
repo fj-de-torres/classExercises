@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contadorDeLetrasMod</title>
+    <script>
+        /*17. Realizar la evolución del ejercicio anterior sin tener en cuenta si la letra pasada como parámetro esta en mayúsculas o minúsculas*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, var1) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + var1 + " veces.", "color:aqua; font-size:2em;");
+            //console.log(formatedText);
+        }
+
+        titulo('Tema: Métodos para trabajo con cadenas');
+        enunciado(`17. Realizar la evolución del ejercicio anterior sin tener en cuenta si la letra pasada como parámetro esta en mayúsculas o minúsculas`);
+
+        function contadorDeLetras(cadena, letra) {
+            const len = cadena.length;
+            let cadenaTrans = cadena.toLowerCase();
+            let letraTrans = letra.toLowerCase();
+            let contador = 0;
+            for (i = 0; i < len; i++) {
+                cadenaTrans[i] == letraTrans && contador++
+            }
+            return contador;
+        }
+        const cadena = "Hacer una función contadorDeLetras que reciba como parámetro de entrada una cadena de texto y una letra y devuelva el número de veces que esa letra esta presente en la palabra. Utilizar para ello un bucle for.";
+        const letra = 'Y';
+        resultado('La letra está contenida:', contadorDeLetras(cadena, letra));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

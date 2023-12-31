@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Size</title>
+    <script>
+        /*12. Completar la función para que se cumplan las siguientes condiciones:
+
+function testSize(num) {
+    return "Change Me";
+}
+num < 5 → return "Tiny";
+num < 10 → return "Small";
+num < 15 → return "Medium";
+num < 20 → return "Large";
+num >= 20 → return "Huge";*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Funciones en Javascript');
+        enunciado('2. Completar la función para que se cumplan las siguientes condiciones...');
+        function testSize(num) {
+            switch (num) {
+                case (num < 5):
+                    return "Tiny";
+                    break;
+                case (num < 10):
+                    return "Small";
+                    break;
+                case (num < 15):
+                    return "Medium";
+                    break;
+                case (num < 20):
+                    return "Large";
+                    break;
+                case (num >= 20):
+                    return "Huge";
+                    break;
+            }
+        }
+        function testSize2(num) {
+            if (num < 5) {
+                return "Tiny";
+            }
+            else if (num < 10) {
+                return "Small";
+            }
+            else if (num < 15) {
+                return "Medium";
+            }
+            else if (num < 20) {
+                return "Large";
+            }
+            else {
+                return "Huge";
+            }
+        }
+        for (i = 1; i <= 40; i += 4) {
+            console.log(i, " ", testSize2(i));
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

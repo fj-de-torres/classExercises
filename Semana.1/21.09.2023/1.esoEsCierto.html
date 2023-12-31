@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EsoEsCierto</title>
+    <script>
+        /*1. Crear y llamar a un método que reciba como parámetro de entrada un valor booleano y muestre «Sí, eso es cierto» si el valor es true, y «No, eso es falso» si el valor es false.*/
+
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Funciones en Javascript');
+        enunciado('1. Crear y llamar a un método que reciba como parámetro de entrada un valor booleano y muestre «Sí, eso es cierto» si el valor es true, y «No, eso es falso» si el valor es false.');
+        //let valor = false;
+
+        function test(Valor) {
+            let i = 1;
+            if (Valor) {
+                resultado('Sí, es cierto');
+            }
+            else {
+                resultado('No, eso es falso');
+            }
+            /* O también:
+            console.log(Valor ? 'Sí, eso es cierto' : 'No, eso es falso'); */
+        }
+        test(true);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

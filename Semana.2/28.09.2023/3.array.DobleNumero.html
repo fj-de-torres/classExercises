@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doble de cada nº</title>
+    <script>
+        /*3.Recorrer la siguiente lista con un bucle imprimiendo el doble de cada número:
+        const my_list = [1,9,3,8,5,7]   
+        */
+        function rainbowLog(message) {
+            const Red = '#FF0000';
+            const Orange = '#FFA500';
+            const Yellow = '#FFFF00';
+            const Green = '#00FF00';
+            const Blue = '#5959fe';
+            const Indigo = '#8a5bac';
+            const Violet = '#e0a4f9';
+            const rainbowColors = [Red, Orange, Yellow, Green, Blue, Indigo, Violet];
+            let output = '';
+            let styles = [];
+            const bgColors = ['white', 'grey', 'black'];
+            const bgColor = bgColors[2];
+            fontSize = '2.5em';
+            for (let i = 0; i < message.length; i++) {
+                message[i] !== " " ? output += `%c${message[i]}` : output += " ";
+                styles.push(`color: ${rainbowColors[i % (rainbowColors.length + 1)]};background-color:${bgColor};font-size:${fontSize};`);
+            }
+            console.log(output, ...styles);
+        }
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(var1) {
+            //formatedText = "%c" + text + " ";
+            console.log("%c" + var1, `color:${colorRespuesta}; font-size:${tamañoFuente};`);
+            //console.log(formatedText);
+        }
+        colorRespuesta = 'aqua';
+        tamañoFuente = '15px';
+        titulo('Tema: Arrays en Javascript');
+        enunciado(`3.Recorrer la siguiente lista con un bucle imprimiendo el doble de cada número:
+        const my_list = [1,9,3,8,5,7]`);
+        const my_list = [1, 9, 3, 8, 5, 7];
+        for (element of my_list) {
+            resultado(2 * element);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendente-while</title>
+    <script>
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Bucle While en Javascript');
+        enunciado('Suma los números del 5 al 0 (inclusive), en orden descendente usando un blucle de while.')
+        let suma = 0;
+        let i = 5;
+        while (i >= 0) {
+            suma += i;
+            i--;
+        }
+        resultado('La suma es: ', suma);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidad Flecha</title>
+    <script>
+        /*Crear y llamar a una función flecha que recibe la velocidad en Km/hora y la devuelva en en metros/hora. Recoger el valor devuelto y mostrarlo con un console.log.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(var1, var2) {
+            formatedText = "%c" + text + " ";
+            console.log(Var + "km/h son" + var2 + " m/s", "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Funciones Flecha');
+        enunciado('Crear y llamar a una función flecha que recibe la velocidad en Km/hora y la devuelva en en metros/hora. Recoger el valor devuelto y mostrarlo con un console.log.');
+
+        const velocidad = kmHora => kmHora * 1000;
+
+        resultado(30, velocidad(30));
+        console.log(velocidad(30));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

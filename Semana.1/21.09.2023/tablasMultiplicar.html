@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TablasMultiplicar</title>
+    <script>
+        const a = 20;
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+
+        function tituloTabla(text, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var, "color:yellow; font-size:15px;");
+            //console.log(formatedText);
+        }
+
+        titulo('Todas las tablas de multiplicar:');
+        for (let i = 1; i <= 9; i++) {
+            tituloTabla('Tabla del', i);
+            for (let j = 1; j <= 10; j++) {
+                resultado = i * j;
+                console.log("%c" + i + ' * ' + j + " = " + resultado, "color:aqua;font-size:14px;");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

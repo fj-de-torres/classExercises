@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÁreaRectángulo</title>
+    <script>
+        /*Crear una función llamada calcularArea que recibirá el ancho y el alto de un rectángulo y calculará su area.
+        
+        Cuando una función recibe varios parámetros, estos irán separados por coma.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text, variable) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, variable, text2) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + variable + text2, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Funciones en Javascript');
+        enunciado('Crear una función llamada calcularArea que recibirá el ancho y el alto de un rectángulo y calculará su area.\n\nCuando una función recibe varios parámetros, estos irán separados por coma.');
+
+        function calcularArea(ancho, alto) {
+            const area = ancho * alto;
+
+            resultado('Ancho:', ancho, 'm');
+            resultado('Alto', alto, 'm');
+            resultado('El área es de:', area, 'm²')
+        }
+        calcularArea(2, 3);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

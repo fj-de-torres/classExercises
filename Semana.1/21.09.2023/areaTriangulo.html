@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Triángulo</title>
+    <script>
+        /*Crear y llamar a una función que recibe la base y la altura de un triángulo y calcula su área.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text, variable) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, variable, text2) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + variable + text2, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Funciones en Javascript');
+        enunciado('Crear y llamar a una función que recibe la base y la altura de un triángulo y calcula su área.');
+
+        function triangulo(base, altura) {
+            const area = base * altura / 2;
+            resultado('Base: ', base, 'm;');
+            resultado('Altura:', altura, 'm;');
+            resultado('El área del triángulo dado es:', area, 'm²;');
+        }
+
+        triangulo(3, 2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

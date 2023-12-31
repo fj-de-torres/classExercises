@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoyQuieroComer</title>
+    <script>
+        /*Ejercicio «hoyQuieroComer»
+Crear una función llamada «hoyQuieroComer» que recibe un parámetro “comida” cuyo valor será «garbanzos».
+Cuando llamemos a la función se mostrará un log indicándonos lo que deseamos comer.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text, variable) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, variable) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + variable, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        function hoyQuieroComer(comida) {
+            resultado('Hoy quiero comer', comida);
+        }
+        titulo('Funciones en Javascript');
+        enunciado('Crear una función llamada «hoyQuieroComer» que recibe un parámetro “comida” cuyo valor será «garbanzos».\n\nCuando llamemos a la función, se mostrará un log indicándonos lo que deseamos comer.');
+
+        hoyQuieroComer('Garbanzos');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nand</title>
+    <script>
+        /*13. Escribe una función nand que tome como parámetros de entrada dos valores booleanos. Si ambos valores son true, debería devolver false. En cualquier otro caso, debería devolver true.
+
+Por ejemplo, la llamada
+
+nand(true, true);
+debería devolver false.
+
+Las llamadas:
+
+nand(true, false);
+nand(false, true);
+nand(false, false);
+deberían devolver true.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var2, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var2 + ": " + Var, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Funciones en Javascript');
+        enunciado(`13. Escribe una función nand que tome como parámetros de entrada dos valores booleanos. Si ambos valores son true, debería devolver false. En cualquier otro caso, debería devolver true.
+
+Por ejemplo, la llamada
+
+nand(true, true);
+debería devolver false.
+
+Las llamadas:
+
+nand(true, false);
+nand(false, true);
+nand(false, false);
+deberían devolver true.`);
+        function nand(a, b) {
+            return !(a && b);
+        }
+        /*Otras formas:
+        function nand(booleanValue1, booleanValue2) {
+        return !(booleanValue1 & booleanValue2);
+    }
+
+    console.log('111111111', nand(true, true))
+    } */
+        var valor1 = nand(true, true);
+        var valor2 = nand(true, false);
+        var valor3 = nand(false, true);
+        var valor4 = nand(false, false);
+
+
+        for (i = 1; i < 5; i++) {
+            resultado('', i, window['valor' + i]);
+        }
+        /*
+                console.log(valor1);
+                console.log(valor2);
+                console.log(valor3);
+                console.log(valor4);
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

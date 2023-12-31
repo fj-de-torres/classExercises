@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longitud Cadenas</title>
+    <script>
+        //Métodos para trabajo con cadenas
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(var1, var2) {
+            //formatedText = "%c" + text + " ";
+            console.log("%c" + var1 + " " + " tiene " + var2 + " caracteres.", "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Métodos para trabajo con cadenas');
+        enunciado('1. Escribe una función llamada longitud que reciba como parámetro de entrada una cadena de texto y devuelva el número de letras que tiene.');
+
+        function longitud(cadena) {
+            return cadena.length
+        }
+
+        resultado('Ana', longitud('Ana'));
+        resultado('Pedro', longitud('Pedro'));
+        //console.log(longitud('Ana'));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidad</title>
+    <script>
+        /*Crear una función llamada calcularVelocidad que recibirá la velocidad en Km / hora y la mostrará en metros / hora.
+
+        A la función le pasaremos como parámetro de entrada 3 kilómetros / hora y deberíamos visualizar 3000 metros / hora.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text, variable) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, variable) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + variable + " m/h", "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Funciones');
+        enunciado('Crear una función llamada calcularVelocidad que recibirá la velocidad en Km / hora y la mostrará en metros / hora.\n\nA la función le pasaremos como parámetro de entrada 3 kilómetros / hora y deberíamos visualizar 3000 metros / hora.');
+        function calcularVelocidad(velocidad) {
+            const velMetrosHora = 1000 * velocidad;
+            resultado('', velMetrosHora);
+        }
+        calcularVelocidad(3);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

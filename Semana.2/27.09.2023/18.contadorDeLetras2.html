@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contadorDeLetras</title>
+    <script>
+        /*18. Hacer una función contadorDeLetras2 que reciba como parámetro de entrada dos cadenas de texto y una letra y devuelva la cadena de texto en la que dicha letra esta más presente. Utilizar para ello un bucle for. No tener en cuenta si la letra pasada como parámetro esta en mayúsculas o minúsculas.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(var1) {
+            //formatedText = "%c" + text + " ";
+            console.log("%c" + var1, `color:${colorRespuesta}; font-size:2em;`);
+            //console.log(formatedText);
+        }
+
+        titulo('Tema: Métodos para trabajo con cadenas');
+        enunciado(`18. Hacer una función contadorDeLetras2 que reciba como parámetro de entrada dos cadenas de texto y una letra y devuelva la cadena de texto en la que dicha letra esta más presente. Utilizar para ello un bucle for. No tener en cuenta si la letra pasada como parámetro esta en mayúsculas o minúsculas.`);
+        let colorRespuesta = 'green';
+        const contadorDeLetras2 = (cadena1, cadena2, letra) => {
+            const len1 = cadena1.length;
+            const len2 = cadena2.length;
+            let cadena1Trans = cadena1.toLowerCase();
+            let cadena2Trans = cadena2.toLowerCase();
+            let letraTrans = letra.toLowerCase();
+            let contador1 = 0;
+            let contador2 = 0;
+            if (len1 == 0 && len2 == 0) {
+                colorRespuesta = 'red';
+                return '¡Cadenas vacías!'
+            }
+            else {
+                for (i = 0; i < len1; i++) {
+                    cadena1Trans[i] == letraTrans && contador1++;
+                }
+                for (j = 0; j < len2; j++) {
+                    cadena2Trans[j] == letraTrans && contador2++;
+                }
+                if (contador1 > contador2) {
+                    colorRespuesta = 'aqua';
+                    return 'La letra ' + letraTrans + ' está más presente en la primera cadena (' + contador1 + ' veces).';
+                }
+                else if (contador2 > contador1) {
+                    colorRespuesta = 'pink';
+                    return 'La letra ' + letraTrans + ' está más presente en la segunda cadena (' + contador2 + ' veces).';
+                }
+                else if (contador1 === 0 && contador2 === 0) {
+                    colorRespuesta = 'grey';
+                    return 'La letra ' + letraTrans + ', no se encuentra en ninguna de las cadenas.'
+                }
+                else {
+                    colorRespuesta = '#aaaaff';
+                    return 'La letra ' + letraTrans + ' aparece el mismo nº de veces en ambas cadenas (' + contador1 + ' veces).';
+                }
+            }
+        }
+        const cadena1 = 'Lorem ipsum dolor sit amet-x.';
+        const cadena2 = 'Lorem ipsum dolor sit amet consectetur adipisicing';
+        const letra = 'L';
+        //
+        //.
+        const v = contadorDeLetras2(cadena1, cadena2, letra);
+        resultado(contadorDeLetras2(cadena1, cadena2, letra));
+        //console.log(contadorDeLetras2(cadena1, cadena2, letra));
+    </script>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        /* #id {
+            display: inline;
+        } */
+    </style>
+</head>
+
+<body>
+    <h4>Primera cadena:</h4>
+    <p id="p1">Hello World!</p>
+    <h4>Segunda cadena:</h4>
+    <p id="p2">Hello World!</p>
+    <h4>Letra:</h4>
+    <p id="letra"></p>
+
+    <p id="resultado"></p>
+    <script>
+        document.getElementById("p1").innerHTML = cadena1;
+        document.getElementById("p2").innerHTML = cadena2;
+        document.getElementById("letra").innerHTML = letra;
+        //document.getElementById("resultado").innerHTML = v;
+    </script>
+</body>
+
+
+</html>

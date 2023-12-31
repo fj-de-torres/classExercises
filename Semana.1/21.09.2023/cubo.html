@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volumen Cubo</title>
+    <script>
+        /*Crear una función llamada calcularCubo que recibe un número, calcule su cubo y muestre el resultado por consola. Llamar a la función pasándole el valor 3.*/
+
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text, variable) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, variable) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + variable, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        function calcularCubo(lado) {
+            const volumen = lado ** 3; // equivale a lado * lado * lado
+            resultado('El volumen es:', volumen);
+        }
+        titulo('Funciones en Javascript');
+        enunciado('Crear una función llamada calcularCubo que recibe un número, calcule su cubo y muestre el resultado por consola. Llamar a la función pasándole el valor 3.');
+        calcularCubo(3);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Flecha</title>
+    <script>
+        /*Crear y llamar a una función flecha que recibe el ancho y el alto de un rectángulo y devuelva su área.
+
+Recoger el valor devuelto y mostrarlo con un console.log.
+
+Cuando una función recibe varios parámetros, estos irán separados por coma.
+
+calculateArea(width, height);*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, variable, text2) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + variable + text2, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Funciones Flecha');
+        enunciado(`Crear y llamar a una función flecha que recibe el ancho y el alto de un rectángulo y devuelva su área.
+Recoger el valor devuelto y mostrarlo con un console.log.
+Cuando una función recibe varios parámetros, estos irán separados por coma:
+calculateArea(width, height);`);
+
+        const area = (base, altura) => base * altura;
+        resultado('El área es', area(2, 3), ' m²');
+        //console.log(area(2, 3));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

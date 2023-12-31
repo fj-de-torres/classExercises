@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderful day</title>
+    <script>
+        /*5. Utilizando el método substring imprimir las letras que van desde la posición 3 a la 7 de la cadena «wonderful day», es decir “derf”.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(var1, inicio, final) {
+            //formatedText = "%c" + text + " ";
+            console.log("%cLas letras que van desde la posición " + inicio + " hasta la posición " + final + " de la cadena " + var1 + " es " + devuelveCadena(var1, inicio, final), "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Tema: Métodos para trabajo con cadenas');
+        enunciado('5. Utilizando el método substring imprimir las letras que van desde la posición 3 a la 7 de la cadena «wonderful day», es decir “derf”');
+
+        const devuelveCadena = (cadena, inicio, final) => cadena.substring(inicio, final);
+
+        resultado('Wonderful day', 3, 7);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

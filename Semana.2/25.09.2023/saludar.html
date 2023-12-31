@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludar</title>
+    <script>
+        /*Escribe una función saludar que reciba un parámetro y devuelva el texto «Hola <parametro>!»*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var + '!', "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Funciones en Javascript');
+        enunciado('Escribe una función saludar que reciba un parámetro y devuelva el texto «Hola <parametro>!»');
+        /*function saludar(txt) {
+            resultado('¡Hola', txt);
+        }
+        function greet(name) {
+            console.log('%cHi' + name + '!', "color:pink;");
+        }*/
+        function saludar(nombre) {
+            return "¡Hola " + nombre + "!";
+        }
+        const v1 = saludar('Ana');
+        const v2 = saludar('Pepita');
+        console.log(v1);
+        console.log(v2);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

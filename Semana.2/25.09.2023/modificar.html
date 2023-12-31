@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar</title>
+    <script>
+        /*Modificar la siguiente función para que devuelva Inside si val está entre 10 y 20 inclusive y Outside en caso contrario.
+
+function test(val) {
+    if (val) { // Cambia esta línea
+        return "Inside";
+    }else {
+        return "Outside";
+    }
+}*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        function test(val) {
+            if (val >= 10 && val <= 20) { // Cambia esta línea
+                return "Inside";
+            } else {
+                return "Outside";
+            }
+        }
+        titulo('Funciones en Javascript');
+        enunciado(`Modificar la siguiente función para que devuelva Inside si val está entre 10 y 20 inclusive y Outside en caso contrario.
+
+function test(val) {
+    if (val) { // Cambia esta línea
+        return "Inside";
+    }else {
+        return "Outside";
+    }
+}`)
+        for (let i = 1; i <= 40; i += 5) {
+            console.log(i, test(i));
+        }
+        // console.log(test1);
+        //o bien:
+        function testMejorado(txt) {
+            return val >= 10 && val <= 20 ? "Inside" : "Outside";
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

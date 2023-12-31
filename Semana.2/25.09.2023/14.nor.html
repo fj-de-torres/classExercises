@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nor</title>
+    <script>
+        /*14. Escribe una función nor que tome como parámetros de entrada dos valores booleanos. Si ambos valores son false, debería devolver true. En cualquier otro caso, el valor devuelto debería ser false.
+        
+        Por ejemplo, la llamada a la función
+        
+        nor(false, false);
+        debería devolver true.
+        
+        Las llamadas:
+        
+        nor(true, false);
+        nor(false, true);
+        nor(true, true);
+        deberían devolver false.*/
+        function titulo(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:yellow; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function enunciado(text) {
+            formatedText = "%c" + text;
+            console.log(formatedText, "color:green; font-size:15px; font-weight:700");
+            //console.log(formatedText);
+        }
+        function resultado(text, Var2, Var) {
+            formatedText = "%c" + text + " ";
+            console.log(formatedText + Var2 + ": " + Var, "color:aqua; font-size:15px;");
+            //console.log(formatedText);
+        }
+        titulo('Funciones en Javascript');
+        enunciado(`14. Escribe una función nor que tome como parámetros de entrada dos valores booleanos. Si ambos valores son false, debería devolver true. En cualquier otro caso, el valor devuelto debería ser false.
+        
+        Por ejemplo, la llamada a la función
+        
+        nor(false, false);
+        debería devolver true.
+        
+        Las llamadas:
+        
+        nor(true, false);
+        nor(false, true);
+        nor(true, true);
+        deberían devolver false`);
+        function nor(a, b) {
+            return !(a || b);
+        }
+        var valor1 = nor(false, false);
+        var valor2 = nor(true, false);
+        var valor3 = nor(false, true);
+        var valor4 = nor(true, true);
+        for (i = 1; i < 5; i++) {
+            // console.log(window['valor' + i]);
+            resultado('', i, window['valor' + i]);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

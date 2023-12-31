@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow</title>
+    <script>
+        function rainbowLog(message) {
+            const Red = '#FF0000';
+            const Orange = '#FFA500';
+            const Yellow = '#FFFF00';
+            const Green = '#00FF00';
+            const Blue = '#5959fe';
+            const Indigo = '#8a5bac';
+            const Violet = '#e0a4f9';
+            const rainbowColors = [Red, Orange, Yellow, Green, Blue, Indigo, Violet];
+            let output = '';
+            let styles = [];
+            const bgColors = ['white', 'grey', 'black'];
+            const bgColor = bgColors[2];
+            fontSize = '2em';
+            for (let i = 0; i < message.length; i++) {
+                message[i] !== " " ? output += `%c${message[i]}` : output += " ";
+                styles.push(`color: ${rainbowColors[i % rainbowColors.length]};background-color:${bgColor};font-size:${fontSize};`);
+            }
+            console.log(output, ...styles);
+        }
+        var radio = 2 * Math.PI * 3;
+        rainbowLog(`Lorem Ipsum:` + `${radio}`);
+    </script>
+    <style>
+        p {
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>If you can't see anything here, you need to open the browser console
+        (F12 key).</p>
+
+</body>
+
+</html>

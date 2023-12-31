@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando %s</title>
+    <script>
+        console.log("%cMi edad es %c36 %caños", "color:pink;", "color:aqua;", "color:pink;");
+        console.log("%cSuma los números del 5 al 0 (inclusive), en orden descendente usando un bucle de tipo for", "color:yellow;");
+        console.log("%c" + parseInt("Hola"), "color:yellow;");
+
+        const Red = '#FF0000';
+        const Orange = '#FFA500';
+        const Yellow = '#FFFF00';
+        const Green = '#00FF00';
+        const Blue = 'blue';
+        const Indigo = '#4B0082';
+        const Violet = '#9400D3';
+        const fontSize = '2em';
+        let bgColor = '';
+        const bgColor2 = '';
+        console.log("%c1%c2%c3%c4%c5%c6%c7", `color:${Red};background-color:${bgColor};font-size:${fontSize}`, `color:${Orange};background-color:${bgColor};font-size:${fontSize}`, `color:${Yellow};background-color:${bgColor2};font-size:${fontSize}`, `color:${Green};font-size:${fontSize}`, `color:${Blue};background-color:${bgColor};font-size:${fontSize}`, `color: ${Indigo}; background-color:${bgColor};font-size:${fontSize}`, `color:${Violet};background-color:${bgColor};font-size:${fontSize}`);
+
+        // function toRainbow(imputString) {
+
+        //     bgColor = ['white', 'black', 'grey'];
+        //     colors = [Red, Orange, Yellow, Green, Blue, Indigo, Violet];
+        //     formats = [`color:${colors};background-color:${bgColor};font-size:${fontSize}`]
+        //     realString = String(imputString);
+        //     let counter = 0;
+        //     formatedString = "";
+        //     for (let i in realString) {
+        //         if (realString[i] !== ' ') {
+        //             counter++;
+        //             formatedString += '%c' + realString[i];
+        //         } else {
+        //             formatedString += " ";
+        //         }
+        //     }
+        //     let variable = ["color:aqua;font-size:15px;", "color:red;font-size:15px;"];
+        //     function dameVal(variable) {
+
+        //     }
+        //     conjunto = `formatedString, variable[0], variable[1]`;
+        //     console.log(console.log({ formatedString, variable[0], variable[1] }));
+        //     console.log(counter);
+        //     console.log("%c1%c2", `${variable}`);
+        // }
+        // toRainbow('Hola Francisco');
+        function rainbowLog(message) {
+            const rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+            let output = '';
+            for (let i = 0; i < message.length; i++) {
+                output += `%c${message[i]}`;
+            }
+            output = '"' + output + '"' + ',';
+            for (let i = 0; i < message.length; i++) {
+                output += `"color: ${rainbowColors[i % rainbowColors.length]};"` + ',';
+            }
+            console.log(output);
+        }
+        let mess = rainbowLog('Hello World');
+        console.log("%s", mess);
+
+    </script>
+</head>
+
+<body>
+    <p style="font-size:2em;text-align: center;">If you can't see anything here, you need to open the browser console
+        (inspect -> console).</p>
+</body>
+
+</html>
